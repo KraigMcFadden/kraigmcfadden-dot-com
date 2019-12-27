@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <!--AdSense-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-6768037992885115",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="thesisPicModal">
+    <img id="modalThesisPic" src="training.png">
+    <span class="close" onclick="hide('thesisPicModal');">&times;</span>
+</div>
+
+<main>
+
+    <nav class="topnav">
+        <ul>
+            <li><a href="homepage.html" class="current">Home</a></li>
+            <li><a href="javapage.html">Learn Node.js</a></li>
+        </ul>
+    </nav>
+
+    <nav class="floatingnav">
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCq24gaTvxuZ1fjBJgppIEIg" target="_blank"><img src="youtube.png" class="floatingnav"></a></li>
+            <li><a href="https://ko-fi.com/kraigmcfadden" target="_blank"><img src="ko-fi.png" class="floatingnav"></a></li>
+            <li><a href="https://medium.com/@kraigm" target="_blank"><img src="medium.png" class="floatingnav"></a></li>
+<!--            <li><a href=""><img src="gameconsole2.png" class="floatingnav" onclick="popOut('gamePlatformTeaserModal');"></a></li>-->
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <h2>YouTube Tutorials</h2>
+        <h3>GameMaker Studio 2</h3>
+
+        <p>
+        <div class="youtubeimgcontainer">
+            <a href="https://youtu.be/Urd9tSd47LQ" target="_blank"><img src="part%201%20-%20smooth%20movement.png" class="youtubeimg"></a>
+        </div>
+        <div class="youtubeimgcontainer">
+            <a href="https://youtu.be/DVnIpF4nirU" target="_blank"><img src="advanced%20movement.png" class="youtubeimg"></a>
+        </div>
+        </p>
+        <p class="divider"> ... </p>
+
+        <h2>My Games</h2>
+        <img src="training.png" onclick="popOut('thesisPicModal');">
+        <p>
+            In 2018, I designed a top down shooter with machine-learning enabled enemy agents. The enemies used a combination of reinforcement learning and genetic algorithms to learn how to play in real time.
+        </p>
+        <p>
+            This game was my senior thesis for my undergraduate study at Princeton University. You can
+            <a href="https://dataspace.princeton.edu/jspui/handle/88435/dsp01n009w504r" target="_blank">read an in-depth account of my work here.</a>
+        </p>
+
+        <p class="divider"> ... </p>
+
+        <h2>Support Me</h2>
+
+        <a href="https://ko-fi.com/kraigmcfadden" target="_blank"><img src="ko-fi.png" id="supportmeicon"></a>
+        <a href="https://ko-fi.com/kraigmcfadden" class="caption" target="_blank">Click for my ko-fi page</a>
+        <p>
+            When I was a kid, I used to spend hours bouncing on my trampoline and dreaming up awesome game ideas that I
+            could never make a reality. Ten years later, I learned how to code in college and was finally able to put the ideas
+            in my head onto a screen.
+        </p>
+        <p>
+            In 2016, I started a game development tutorial YouTube channel that had over two thousand subscribers with over 225,000 views. Those days,
+            my videos were twenty minutes, thirty minutes, sometimes more, and I often debugged while on camera.
+        </p>
+        <p>
+            In 2019, I started a new channel because I wanted to make my videos better. I started the old channel when I didn't really
+            know how to program. Some of my old videos were pretty bad. But I loved the community, and I loved teaching
+            (my mom is a teacher so maybe I got that from her) so I came back to make more YouTube videos.
+        </p>
+        <p>
+            If you like my work, you might consider <a href="https://ko-fi.com/kraigmcfadden" target="_blank">donating to my Ko-fi page</a> to
+            fund more tutorials. Those who donate get the chance to <a href="https://ko-fi.com/kraigmcfadden" target="_blank">make special requests for future game tutorials</a>.
+        </p>
+        <p>
+            Regardless of what you can give, thanks for being here!
+        </p>
+
+    </div>
+
+</main>
+
+<div class="footer">
+
+    <nav class="footernav">
+        <ul>
+            <li><a href="https://www.youtube.com/channel/UCq24gaTvxuZ1fjBJgppIEIg" target="_blank" class="footernav">YouTube</a></li>
+            <li><a href="https://medium.com/@kraigm" target="_blank" class="footernav">Medium</a></li>
+            <li><a href="https://ko-fi.com/kraigmcfadden" target="_blank" class="footernav">Support Me</a></li>
+<!--            <li>New! <a href="" class="footernav">Game Publishing Platform</a></li>-->
+        </ul>
+    </nav>
+</div>
+
+<script>
+    function popOut(id) {
+        var modal = document.getElementById(id);
+        modal.style.display = "block";
+    }
+    function hide(id) {
+        var modal = document.getElementById(id);
+        modal.style.display = "none";
+    }
+
+    var thesisPicModal = document.getElementById("thesisPicModal");
+    // var gamePlatformTeaserModal = document.getElementById("gamePlatformTeaserModal");
+    window.onclick = function(event) {
+        if (event.target === thesisPicModal) {
+            thesisPicModal.style.display = "none";
+        }
+        // if (event.target === gamePlatformTeaserModal) {
+        //     gamePlatformTeaserModal.style.display = "none";
+        // }
+    }
+
+</script>
+</body>
+</html>

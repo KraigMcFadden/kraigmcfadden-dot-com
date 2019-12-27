@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #90afc5;
+}
+
+a:visited {
+    color: #386a8c;
+}
+
+/* ----------------- Styling the navigation bar on top ----------------- */
+
+nav.topnav {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+nav.topnav ul {  /* list specifics */
+    list-style-type: none;
+    overflow: hidden;
+    padding: 2em 1em;
+}
+
+nav.topnav ul li {
+    display: inline;
+    padding: 0 0.5em;
+}
+
+nav.topnav ul li a {  /* make each link block look a certain way */
+    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif;
+    padding: 1em 1.5em;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 2px solid #111111;
+}
+
+nav.topnav ul li a:hover {  /* highlight button being hovered over */
+    background-color: black;
+    color: cadetblue;
+}
+
+nav.topnav ul li a.current {  /* highlight current link */
+    background-color: dimgray;
+}
+
+
+/* ----------------- Styling the floating navigation bar ----------------- */
+
+nav.floatingnav {
+    margin: auto;
+    width: 100%;
+}
+
+nav.floatingnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+     text-align: center;
+}
+
+nav.floatingnav ul li {
+    display: inline;
+}
+nav.floatingnav ul li a {
+    position: relative;
+    margin: auto .5rem auto .5rem;
+}
+img.floatingnav {
+    width: 2rem;
+    height: auto;
+}
+
+/* ----------------- Styling the footer navigation bar ----------------- */
+
+nav.footernav {
+    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif
+}
+
+nav.footernav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    line-height: 2em;
+}
+
+nav.footernav ul li {
+}
+nav.footernav ul li a {
+    color: white;
+    margin: auto .5rem auto .5rem;
+}
+
+
+/* ---------------------- Styling the content ------------------- */
+
+main {
+    height: 100%;
+    width: 72%;
+    margin: auto;
+    overflow: auto;
+    background-color: rgba(250, 250, 250, 0.85);
+    color: black;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5em;
+    box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.2), 0 1.5em 5em 0 rgba(0, 0, 0, 0.19);
+}
+
+main div.content {
+    width: 90%;
+    margin: auto;
+    font-family: "Big Caslon", "Garamond", serif;
+}
+
+h1, h2, h3 {
+    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif;
+}
+img {
+    width: 100%;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+p.divider {
+    color: rgba(250, 250, 250, 0);
+}
+
+.footer {
+    padding: 1rem;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #386a8c;
+    color: white;
+}
+
+.caption {
+    font-style: italic;
+    color: gray;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+/* ---------------------- For YouTube thumbnails ------------------- */
+
+.youtubeimgcontainer{
+    width: 50%;
+    float: left;
+}
+.youtubeimg {
+    padding: 3px;
+}
+.youtubeimg:hover {
+    opacity: .8;
+}
+/* ---------------------- For popups ------------------------ */
+.close {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    position: relative;
+
+}
+.close:hover {
+    cursor: pointer;
+}
+
+/* ---------------------- For Thesis Picture popup  ------------------- */
+
+#thesisPicModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    background-color: rgba(0,0,0, 0.7);
+}
+
+#modalThesisPic {
+    position: relative;
+    margin: 2rem auto 1rem auto;
+    width: 900px;
+    display: block;
+}
+
+/* ---------------------- For Support ------------------- */
+
+#supportmeicon {
+    width: 40%;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+#supportmeicon:hover {
+    opacity: .8;
+}
+/* --------------------- For itty bitty screens -------------------*/
+
+@media screen and (max-width: 600px) {
+    nav.topnav ul li a {
+        float: none;
+        display: block;
+        width: 100%
+    }
+
+    nav.topnav ul {
+        padding: 0 1em 0;
+    }
+
+    nav.topnav ul li {
+        padding-top: .1em;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    main div.content {
+        width: 90%;
+        margin: auto;
+    }
+
+    #modalThesisPic {
+        width: 100%;
+    }
+}

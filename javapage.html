@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Learn Node.js</title>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="shortcut icon" href="favicon.ico"/>
+
+    </head>
+
+    <body>
+        <main>
+            <nav class="topnav">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="javapage.html" class="current">Learn Node.js</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>Want to learn Node.js?</h1>
+                <p>Node.js is a fast-growing, young language used for server-side development. People are going crazy about it even though (shhh, don't let them hear me say this), it's just JavaScript that can be executed outside of a browser. What does that mean? It means it's still JavaScript, so be careful! It's dynamically-typed, it's interpreted*, and it still has all the quirks of JavaScript. If you're alright with that, read on!
+
+                In this tutorial, I am going to assume you have some basic familiarity with programming, but not necessarily with JavaScript or Node.js. The bulk of the content will be on how the language works, what it is (and isn't) good at, and how to write common programs in it. If you're brand new to programming that might leave you with some homework to do on your own.
+
+                *Well... there is some compiling, but it only compiles whatever is currently running. As such, you don't get a full compile-time check like you would with Java or C or something.
+                </p>
+                <h2>What is Node.js and how does it relate to JavaScript?</h2>
+                <p>Like I mentioned, Node.js is just JavaScript that can be run outside of a browser. Kind of. Sorta. There are some interesting debates about what Node actually is (like <a href="https://softwareengineering.stackexchange.com/questions/299152/is-node-js-a-framework">this one</a> about whether it's a language or a framework) and the conclusion seems to be that it's both. I would describe it as a language that uses the same syntax and paradigms as JavaScript, but provides you with a different runtime and therefore different capabilities. It also includes a standard library to help you take advantage of those capabilities which you wouldn't find in vanilla JavaScript. So it is a new language that just happens to read exactly like an existing language.
+
+                This kind of syntax and paradigm reuse isn't anything new though - languages have been building off of one another for a long time! C++ came from additions to C that abstracted memory-management away, and resulted in a language that completely encapsulated C at the same time (you could write plain C as C++). Java, while developing some of it's own paradigms, adopted a C-style syntax. C# in turn was a direct response to Java, and while it uses similar concepts and similar syntax, the two have diverged a bit as they've grown. I would expect that as time goes on, we will see Node.js and plain JavaScript diverge a bit as well.
+
+                For now, let's think of it like this: JavaScript runs in a browser. The webpage DOM is its runtime. Node, meanwhile, can run on a server using the V8 runtime engine. Syntactically, they are the same, but functionally speaking, JavaScript is used to manipulate the DOM and make dynamic webpages, whereas Node can do things typical backend languages can do, like manipulate files, make REST calls, and interact with databases.
+                </p>
+                <h2> So that's kind of boring, why all the hype?</h2>
+                <p>Good question! It would seem that Node isn't bringing much to the table. After all, we already have backend languages that can do everything that Node can. And on top of that, JavaScript began its life working on webpages, so it wasn't even designed with backend development in mind. Why in the world would we use it?
+
+                Well, we might use it if we're building a web app, and I can give you three good reasons why. (If you're not building a web app, I might advise you to use a different language).
+
+                First off, Node is good at handling requests and responses (something that a web app does a lot of). Rather than doing concurrency by using multiple threads like Java or Go, Node is "concurrent" because of an internal scheduler called the event loop. This scheduler basically queues up work on a single thread, and by listening for events, determines when there is a break in the current work and something else can start running, or when there is new work coming in to queue up. Many languages have event loop schedulers behind the scenes, but Node displays it front and center, making it easy for developers to think and write code in terms of events. Be warned though: this system is good for managing independent bouts of quick-finishing code. It is NOT AT ALL good at long-running chunks of code where execution order matters. You should use a multi-threaded, CPU efficient language like Go, C++, C# or Java for that.
+
+                Second, Node has a community of web-minded people behind it, so it has the tools you need to build a web app. From the standard library, which has easy to use http, url, and query parsing modules, to the packages maintained by folks in the community, Node has what you need to make and serve requests online. Furthermore, it has what you need WITHOUT much of the boilerplate that comes with many other languages. Without bashing on Java and the Spring Boot framework too much, (because I actually kind of like them), I will say that writing a server in Node is much quicker than writing it in Java. Also, anecdotally speaking, there is less code and less setup involved.
+                </p>
+                <h2>What are the JavaScript essentials I need to know?</h2>
+                <h2>What are the Node essentials I need to know?</h2>
+                <h2>How does concurrency work in Node?</h2>
+                <h2>What does a basic web app look like?</h2>
+            </div>
+        </main>
+    </body>
+</html>
