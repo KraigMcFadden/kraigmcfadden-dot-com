@@ -47,7 +47,7 @@ nav {
 
 nav h2 {
     font-size: 1.5em;
-    font-family: norwester, serif;
+    font-family: 'Open Sans', serif;
 }
 
 /* Style the list inside the menu */
@@ -99,7 +99,8 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 1.5em;
-    font-family: norwester, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     min-width: 12vw;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
