@@ -3,235 +3,136 @@
 }
 
 body {
+    font-family: 'Open Sans', Lato, sans-serif;
     margin: 0;
-    background-color: #90afc5;
+    font-size: 100%;
+    background-image: url("resources/images/lights.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(10, 10, 10);
+    color: whitesmoke;
 }
 
-a:visited {
-    color: #386a8c;
+@font-face {
+    font-family: "norwester";
+    src: url("resources/fonts/norwester.otf") format("opentype");
 }
 
-/* ----------------- Styling the navigation bar on top ----------------- */
+@font-face {
+    font-family: "TESLA";
+    src: url("resources/fonts/TESLA.ttf") format("truetype");
+}
 
-nav.topnav {
-    margin: auto;
-    width: 100%;
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+    height: 100vh;
+    color: inherit;
+    background-color: rgba(10, 10, 10, 0.75);
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-width: 15vw;
+    padding: 2%;
     text-align: center;
+    border-right: thin solid gainsboro;
+    line-height: 2em;
+    background-color: rgba(10, 10, 10, 0.75);
 }
 
-nav.topnav ul {  /* list specifics */
+nav h2 {
+    font-size: 1.5em;
+    font-family: norwester, serif;
+}
+
+/* Style the list inside the menu */
+nav ul {
     list-style-type: none;
-    overflow: hidden;
-    padding: 2em 1em;
+    text-align: left;
+    padding: 0;
 }
 
-nav.topnav ul li {
-    display: inline;
-    padding: 0 0.5em;
+nav ul li a {
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
-nav.topnav ul li a {  /* make each link block look a certain way */
-    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif;
-    padding: 1em 1.5em;
-    color: black;
+nav ul li a img {
+    width: 85%;
+    border-radius: 50%;
+    border: solid medium gainsboro;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 9;
+    -ms-flex: 9;
+    flex: 9;
+    padding: 10% 25%;
+    text-align: left;
+    color: inherit;
+}
+
+article div {
+    font-size: 8em;
+    font-family: TESLA, sans-serif;
+}
+
+article p {
+    line-height: 1.5em;
+}
+
+/* Style the buttons */
+button {
+    border: medium solid whitesmoke;
+    background-color: transparent;
+    color: whitesmoke;
+    padding: 2%;
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
-    border: 2px solid #111111;
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: norwester, sans-serif;
+    min-width: 12vw;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
-nav.topnav ul li a:hover {  /* highlight button being hovered over */
-    background-color: black;
-    color: cadetblue;
+button:hover {
+    background-color: whitesmoke;
+    color: rgb(10, 10, 10);
 }
 
-nav.topnav ul li a.current {  /* highlight current link */
-    background-color: dimgray;
+.highlighted-button {
+    background-color: #0277BD;
+    border-color: #0277BD;
 }
 
-
-/* ----------------- Styling the floating navigation bar ----------------- */
-
-nav.floatingnav {
-    margin: auto;
-    width: 100%;
+.highlighted-button:hover {
+    background-color: #81D4FA;
+    border-color: #81D4FA;
 }
 
-nav.floatingnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-     text-align: center;
-}
-
-nav.floatingnav ul li {
-    display: inline;
-}
-nav.floatingnav ul li a {
-    position: relative;
-    margin: auto .5rem auto .5rem;
-}
-img.floatingnav {
-    width: 2rem;
-    height: auto;
-}
-
-/* ----------------- Styling the footer navigation bar ----------------- */
-
-nav.footernav {
-    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif
-}
-
-nav.footernav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    line-height: 2em;
-}
-
-nav.footernav ul li {
-}
-nav.footernav ul li a {
-    color: white;
-    margin: auto .5rem auto .5rem;
-}
-
-
-/* ---------------------- Styling the content ------------------- */
-
-main {
-    height: 100%;
-    width: 72%;
-    margin: auto;
-    overflow: auto;
-    background-color: rgba(250, 250, 250, 0.85);
-    color: black;
-    font-family: Helvetica, sans-serif;
-    line-height: 1.5em;
-    box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.2), 0 1.5em 5em 0 rgba(0, 0, 0, 0.19);
-}
-
-main div.content {
-    width: 90%;
-    margin: auto;
-    font-family: "Big Caslon", "Garamond", serif;
-}
-
-h1, h2, h3 {
-    font-family: Consolas, "Source Code Pro", Menlo, "Droid Sans Mono", Helvetica, sans-serif;
-}
-img {
-    width: 100%;
-}
-
-img:hover {
-    cursor: pointer;
-}
-
-p.divider {
-    color: rgba(250, 250, 250, 0);
-}
-
-.footer {
-    padding: 1rem;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #386a8c;
-    color: white;
-}
-
-.caption {
-    font-style: italic;
-    color: gray;
-    text-align: center;
-    margin: auto;
-    display: block;
-}
-/* ---------------------- For YouTube thumbnails ------------------- */
-
-.youtubeimgcontainer{
-    width: 50%;
-    float: left;
-}
-.youtubeimg {
-    padding: 3px;
-}
-.youtubeimg:hover {
-    opacity: .8;
-}
-/* ---------------------- For popups ------------------------ */
-.close {
-    font-size: 1rem;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    position: relative;
-
-}
-.close:hover {
-    cursor: pointer;
-}
-
-/* ---------------------- For Thesis Picture popup  ------------------- */
-
-#thesisPicModal {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: none;
-    background-color: rgba(0,0,0, 0.7);
-}
-
-#modalThesisPic {
-    position: relative;
-    margin: 2rem auto 1rem auto;
-    width: 900px;
-    display: block;
-}
-
-/* ---------------------- For Support ------------------- */
-
-#supportmeicon {
-    width: 40%;
-    display: block;
-    position: relative;
-    margin: auto;
-}
-#supportmeicon:hover {
-    opacity: .8;
-}
-/* --------------------- For itty bitty screens -------------------*/
-
-@media screen and (max-width: 600px) {
-    nav.topnav ul li a {
-        float: none;
-        display: block;
-        width: 100%
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
     }
-
-    nav.topnav ul {
-        padding: 0 1em 0;
+    nav {
+        width: 100vw;
     }
-
-    nav.topnav ul li {
-        padding-top: .1em;
+    nav ul li a img {
+        width: 50%;
     }
-
-    main {
-        width: 90%;
-    }
-
-    main div.content {
-        width: 90%;
-        margin: auto;
-    }
-
-    #modalThesisPic {
-        width: 100%;
+    article {
+        width: 100vw;
     }
 }
